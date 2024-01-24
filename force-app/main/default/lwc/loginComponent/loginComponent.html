@@ -1,0 +1,32 @@
+<template>
+    <lightning-card>
+            <div class=slds-col>
+
+                <h1 class="text-align-center">
+                    <b class="main-heading slds-align_absolute-center">Welcome to Community, by Hic global Solutions</b> 
+                </h1>
+                <p class="slds-align_absolute-center">
+                    <span class="sub-heading">Please login below or click "Register" to sign up!</span>
+                </p>
+
+                <template if:true={errorCheck}>
+                    <div class="error slds-var-p-around_x-small slds-var-p-top_small" role="alert">
+                        <span>{errorMessage}</span>
+                    </div>
+                </template>
+
+            </div>
+
+            <lightning-input label = "Username" type="text" placeholder="Userame" onchange={handleUserNameChange} required></lightning-input>
+            <lightning-input label = "Password" type="password"  placeholder="Password"  onchange={handlePasswordChange} required></lightning-input>
+
+            <div class="slds-align_absolute-center" style="height:5rem">
+                <button type="submit" class="login-button slds-button" onclick={handleLogin}>Log In</button>
+            </div>
+
+            <div class="slds-col slds-var-p-top_small">
+                <a href="https://hicglobalcrmsolutions-dev-ed.develop.my.site.com/CustomLWRsite/ForgotPassword" class="forgot-password-text">Forgot your password?</a>
+                <a href="https://hicglobalcrmsolutions-dev-ed.develop.my.site.com/CustomLWRsite/registerpage" class="register-text">Register</a>
+            </div>
+    </lightning-card>
+</template>

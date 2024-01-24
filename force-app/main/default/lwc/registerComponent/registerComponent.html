@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <lightning-input label="First name" onchange={firstNamevalue} ></lightning-input>
+        <lightning-input label="Last name" onchange={lastNamevalue} ></lightning-input>
+        <lightning-input label="Email" onchange={emailvalue} ></lightning-input>
+        <lightning-input label="Username" onchange={userNamevalue} ></lightning-input>
+        <lightning-input label="CommunityNickname" onchange={CommunityNicknamevalue} ></lightning-input>
+        <lightning-input label="Alias" onchange={Aliasvalue} ></lightning-input>
+
+        <!-- <lightning-input label="Password" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" onchange={Passwordvalue} ></lightning-input>
+        <lightning-input label="ConfirmPassword" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" onchange={Passwordvalue} ></lightning-input> -->
+
+        
+        <div class="slds-align_absolute-center" style="height:5rem">
+            <lightning-button brand = "" label="SignUp" onclick={handleRegister}>
+            </lightning-button>
+        </div>
+        
+        <div class="slds-col">
+            <p class="text-align-center slds-var-p-around_medium">
+                <a href="https://hicglobalcrmsolutions-dev-ed.develop.my.site.com/CustomLWRsite/loginpage" class="sub-heading register-heading">Already have an account?</a>
+
+            </p>
+        </div>
+
+    </lightning-card>
+     
+    
+</template>
